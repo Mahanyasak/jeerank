@@ -1,0 +1,77 @@
+<html><head>
+  <title>Jee mains rank predictor </title>
+</head>
+<body>
+<center style="background-color:#CB4335">
+<h1>Jee Main Jan 2020 Rank Predictor</h1>
+<center style="background-color:#D5DBDB">
+<p id="pws"></p>
+===================================================================================================================================================<br><br>
+<strong>Enter your Percentile here</strong><br><br>
+<input type="float" id="myNumber">
+<p>Click the button to get the rank^.</p>
+<button onclick="jeeMain()" style="background-color:#D94B2D">Check Rank</button><br><br>
+<button style="background-color:#850790"><a href="http://ntaresults.nic.in/resultservices/JEEMain-January-2020-auth"></a>Check percentile here</button>
+<p>^<strong>Note:</strong> Enter the whole 9-digits of the percentile.</p>
+<p id="wrong"><strong>Your rank is</strong></p>
+<p id="correct"></p>
+<script>
+  var i =0;
+  function jeeMain() 
+{
+  var x = document.getElementById("myNumber").value;
+  i++;
+  if (x<100) 
+  {
+    if(x.length == 10)
+    {                                                                                         
+      if (x < 100)
+      {
+          var y = 874469*((100 - x)/100 ) ;
+         document.getElementById("correct").innerHTML = Math.round(y);
+     }
+        else 
+        {
+          var str1 = "Enter a value less than 100";
+          document.getElementById("wrong").innerHTML = str1;  
+        }
+   }
+    else
+    {
+      var str2 = "Please enter a 9-Digit number";
+     document.getElementById("wrong").innerHTML = str2;
+    }
+   
+   } 
+
+  else
+  {
+    var z = 1;
+    document.getElementById("correct").innerHTML = z;
+  }
+ }
+</script>
+===================================================================================================================================================<br><br>
+  <p style="background-color:#2C3E50">
+  <b>What's new in version 1.2</b><br>
+     1. Fixed the inaccurate ranking<br>
+     2. Fixed bugs<br>
+     3. Added Login for admin users
+    </p>
+===================================================================================================================================================<br><br>
+
+<p align="right" style="background-color:#D35400;">
+  *This rank predictor is powered By <strong>MK teck</strong><br>
+                                                                              ver1.2
+</p>
+===================================================================================================================================================<br>
+<br>
+<div class="history" style="background-color:#F4D03F" align="right">
+      Last Update :02/07/2020
+    </div>
+    ===================================================================================================================================================<br><br>
+</center>
+</center>
+
+</body>
+</html>
